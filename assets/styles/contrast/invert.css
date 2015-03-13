@@ -1,0 +1,82 @@
+body {
+	background: #000;
+	color: #fff;
+}
+
+.navbar-brand, .dropdown-header {
+	color: #fff !important;
+}
+
+a {
+	color: #52c8ff;
+}
+
+a:hover {
+	color: #52c8ff;
+	text-decoration: underline;
+}
+
+section#pagination {
+	background: #222;
+}
+
+.navbar {
+	border: none !important;
+}
+
+.navbar-default {
+	background: #222 !important;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+	background-color: #111;
+}
+
+.dropdown-menu {
+	background: #111 !important;
+}
+
+section#header {
+	background: #222 !important;
+	color: #fff !important;
+}
+
+section#title {
+	background: #111 !important;
+	color: #fff !important;
+}
+
+section#pagination .btn-primary {
+	background: #444;
+	color: #52c8ff;
+	border: none;
+}
+
+section#nav li a {
+	color: #52c8ff;
+}
+
+section#nav li a:hover {
+	color: #52c8ff;
+	text-decoration: underline;
+}
+
+ul.contrast li.low,
+ul.contrast li.normal,
+ul.contrast li.high,
+ul.contrast li.invert
+{
+	background: #222;
+	border: 1px solid #52c8ff;
+}
+
+ul.contrast li.low a,
+ul.contrast li.normal a,
+ul.contrast li.high a,
+ul.contrast li.invert a
+{
+	color: #52c8ff;
+}
+
+ul.font li, ul.spacing li { background: #222; border: 1px solid #52c8ff; }
+ul.font li a, ul.spacing li a { color: #52c8ff; }

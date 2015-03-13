@@ -1,0 +1,346 @@
+/*
+/****************************************************
+/* SETUP
+/****************************************************
+*/
+
+html, body {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+html, body, input {
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+
+section {
+	padding: 40px 0;
+}
+
+hr {
+	margin: 40px 0;
+}
+
+
+
+/*
+/****************************************************
+/* FONT SIZE SETTINGS
+/****************************************************
+*/
+
+body.font_small,
+body.font_small p,
+body.font_small ul li
+{
+	font-size: 0.95em;
+}
+
+body.font_medium,
+body.font_medium p,
+body.font_medium ul li
+{
+	font-size: 1em;
+}
+
+body.font_large,
+body.font_large p,
+body.font_large ul li
+{
+	font-size: 1.05em;
+}
+
+body.font_xlarge,
+body.font_xlarge p,
+body.font_xlarge ul li
+{
+	font-size: 1.1em;
+}
+
+
+
+/*
+/****************************************************
+/* SPACING SETTINGS
+/****************************************************
+*/
+
+body.spacing_small,
+body.spacing_small p,
+body.spacing_small ul li
+{
+	line-height: 1em !important;
+}
+
+body.spacing_medium,
+body.spacing_medium p,
+body.spacing_medium ul li
+{
+	line-height: 1.5em;
+}
+
+body.spacing_large,
+body.spacing_large p,
+body.spacing_large ul li
+{
+	line-height: 2em !important;
+}
+
+body.spacing_xlarge,
+body.spacing_xlarge p,
+body.spacing_xlarge ul li
+{
+	line-height: 2.5em !important;
+}
+
+
+
+/*
+/****************************************************
+/* SECTIONS
+/****************************************************
+*/
+
+section#header h1 {
+	margin: 10px 0 0;
+}
+
+section#header h2 {
+	line-height: 41px;
+	margin: 10px 0 0;
+}
+
+section#masthead {
+	margin: 0;
+	padding: 0;
+	text-align: center !important;
+}
+
+.img-responsive {
+	display: inline-block;
+}
+
+section#nav{
+	padding: 0;
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.nav>li>a {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+section#nav li a {
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+
+section#nav li a:hover {
+	background: none;
+}
+
+section#content h1 {
+	margin: 0 0 40px;
+}
+
+section#content h3:not(:first-child) {
+	margin-top: 40px;
+	padding-top: 40px;
+	border-top: 1px solid #eee;
+}
+
+section#content h4 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+section#content p, section#content ul {
+	margin: 0 0 20px;
+}
+
+section#nav .navbar {
+	margin: 0;
+	border-radius: 0;
+	border-bottom: 1px solid #eee;
+}
+
+section#nav  .navbar-default {
+	border: none;
+	border: 1px solid #CCC;
+}
+
+section#nav .dropdown-menu {
+	background-color: #f8f8f8;
+	border: 1px solid #eee;
+	border-radius: 0;
+}
+
+.navbar-toggle {
+	background: #ccc;
+}
+
+.navbar-form {
+	margin: 0;
+}
+
+section#pagination{
+	background: #f5f5f5;
+}
+
+section#progress{
+	background: #428bca;
+	padding: 0;
+}
+
+section#progress .progress{
+	height: 20px;
+	font-size: 10px;
+	margin-bottom: 0;
+	border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+section#footer {
+	background: #444;
+	color: #FFFFFF;
+}
+
+section#footer a {
+	color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+	section#nav .container {
+		padding: 0;
+	}
+	.navbar-nav>li>a {
+		margin-top: 0px;
+	}
+}
+
+@media (max-width: 768px) {
+	section {
+		padding: 20px 0;
+	}
+	section h1 {
+		margin: 0;
+	}
+	section#nav{
+		padding: 0 0;
+	}
+	.dropdown-menu {
+		white-space: normal;
+	}
+	section#nav .dropdown-menu {
+		font-size: inherit;
+	}
+	section#content {
+		font-size: 16px;
+		line-height: 1.5em;
+	}
+	section#content h1 {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+section#content .container.paper {
+	position: relative;
+	min-height: 20px;
+	padding: 80px;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid #fafafa;
+	-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.3),0 0 40px rgba(128,128,128,.1)inset;
+	box-shadow: 0 1px 4px rgba(0,0,0,.3),0 0 40px rgba(128,128,128,.1)inset;
+}
+
+.bg-image {
+	position: relative;
+	height: 100%;
+	background-size: cover;
+	z-index: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.dropdown-menu {
+    height: auto;
+    max-height: 400px;
+    overflow-x: hidden;
+}
+
+ul.contrast,
+ul.font,
+ul.spacing
+{
+	float: left;
+	padding: 0;
+	list-style: none;
+	margin-bottom: 40px;
+}
+
+ul.contrast li,
+ul.font li,
+ul.spacing li
+{
+	float:left;
+	text-align: center;
+	margin-right: 20px;
+	vertical-align: middle;
+	margin-bottom: 0;
+}
+
+ul.font li, ul.spacing li { border: 1px solid #000; }
+ul.font li a, ul.spacing li a { color: #000; }
+
+ul.font li.small, ul.spacing li.small { font-size: 0.95em; }
+ul.font li.medium, ul.spacing li.medium { font-size: 1em; }
+ul.font li.large, ul.spacing li.large { font-size: 1.05em; }
+ul.font li.xlarge, ul.spacing li.xlarge { font-size: 1.1em; }
+
+ul.contrast li a,
+ul.font li a,
+ul.spacing li a
+{
+	float: left;
+	width: 100px;
+	padding: 30px 20px;
+}
+
+section#title {
+	padding: 20px 0;
+	background: #EEE;
+}
+
+span.emphasise {
+	font-size: 30px;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.percentage {
+	margin-top: 13px;
+}
+
+.swipe_box {
+	background: #a0e0c8;
+}
+
+td.small {
+	font-size: inherit;
+}

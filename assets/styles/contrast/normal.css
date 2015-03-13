@@ -1,0 +1,47 @@
+section#header {
+	background: #2d5e1a;
+	color: #fff;
+}
+
+section#nav  .navbar-default {
+	background-color: #DEE0E2;
+	border-color: #CCC;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
+	color: #000;
+}
+
+section#nav li a {
+	color: #333;
+}
+
+section#nav li a:hover {
+	color: #000;
+}
+
+ul.contrast li.low { background: #354c78; border: 1px solid #000; }
+ul.contrast li.low a { color: #9ac7fe; }
+
+ul.contrast li.normal { background: #fff; border: 1px solid #000; }
+ul.contrast li.normal a { color: #000; }
+
+ul.contrast li.high { background: #fdff00; border: 1px solid #000; }
+ul.contrast li.high a { color: #000; }
+
+ul.contrast li.invert { background: #000; border: 1px solid #000; }
+ul.contrast li.invert a { color: #fff; }
+
+
+/*
+/****************************************************
+/* MOBILE
+/****************************************************
+*/
+
+@media (max-width: 768px) {
+	section#nav {
+		background: #f5f5f5;
+	}
+}
