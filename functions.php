@@ -403,6 +403,8 @@ add_action( 'start_build','build_edoc' );
 function build_edoc( $paper_size = 'A4', $font = 'sans', $font_size = 12, $cover = 1, $toc = 1 ) {
 
 	// New class
+	set_time_limit(3600);
+	ini_set('max_execution_time', 3600);
 	$mpdf=new mPDF('', $paper_size, $font_size, $font);
 	
 	// Log start time
