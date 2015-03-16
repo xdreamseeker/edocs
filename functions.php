@@ -506,8 +506,16 @@ function build_edoc( $paper_size = 'A4', $font = 'sans', $font_size = 12, $cover
 	// Update last updated values
 	update_option( 'last_updated_date', $date = date('d/m/Y', time()));
 	update_option( 'last_updated_time', $date = date('G:i:s', time()));
-	// Output PDF
+	// Check download directory exists
+	if(file_exists(dirname(dirname(dirname(__DIR__))).'/download/')) {
+		error_log( 'Download Directory: Exists!' );
+	} else {
+		error_log( 'Download Directory: Created!' );
+		mkdir(dirname(dirname(dirname(__DIR__))).'/download/');	
+	}
+	// Output PDF	
 	$mpdf->Output(dirname(dirname(dirname(__DIR__))).'/download/'.str_replace('/','_',str_replace(' ','_',trim(strtolower(get_bloginfo('name'))))).'.pdf', 'F');
+
 	
 }
 
