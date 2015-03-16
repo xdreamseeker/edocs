@@ -76,7 +76,7 @@
 						$pdf_file = str_replace('/','_',str_replace(' ','_',trim(strtolower(get_bloginfo('name'))))).'.pdf';
 						$pdf = $pdf_dir.$pdf_file;
 						if(file_exists($pdf)) { ?>
-						<li><a href="<?php echo dirname(get_bloginfo('url')).'/download/'.$pdf_file;?>"><i class="fa fa-cloud-download"></i> Download</a></li>
+						<li><a href="<?php echo get_bloginfo('url').'/download/'.$pdf_file;?>"><i class="fa fa-cloud-download"></i> Download</a></li>
 					<?php } ?>
 				</ul>
 				
