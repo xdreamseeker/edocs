@@ -1,3 +1,3 @@
 <?php
-	wp_redirect(get_option('edocs_options')['redirect'], get_bloginfo('url'), 301);
+	wp_redirect(get_option('edocs_options')['redirect'], 301);
 	exit;
