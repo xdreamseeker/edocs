@@ -59,7 +59,7 @@
 						
 						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list"></i> Contents <span class="caret"></span></a>
 							<ul class="dropdown-menu" role="menu">
-								<li><a accesskey="2" href="<?php echo get_bloginfo('url'); ?>/settings/contents">Table of contents</a></li>
+								<li><a accesskey="2" href="<?php echo get_bloginfo('url'); ?>/pages/contents">Table of contents</a></li>
 								<li role="presentation" class="divider"></li>
 								<?php 
 									$pages = get_pages( array( 'parent' => 0, 'sort_column' => 'menu_order' ) ); 
@@ -91,7 +91,7 @@
 					</ul></li>
 					<?php } ?>
 					<?php if( get_option('edocs_options')['help'] ) { ?>
-					<li><a accesskey="0" href="<?php echo get_bloginfo('url'); ?>/settings/help"><i class="fa fa-question-circle"></i> Help</a></li>
+					<li><a accesskey="0" href="<?php echo get_bloginfo('url'); ?>/pages/help"><i class="fa fa-question-circle"></i> Help</a></li>
 					<?php } ?>
 				</ul>
 				
