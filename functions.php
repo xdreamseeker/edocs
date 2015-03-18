@@ -488,10 +488,17 @@ function build_edoc( $paper_size = 'A4', $font = 'sans', $font_size = 12, $cover
 			    }
 			} else {
 				$html = '<h1>'.get_the_title($page).'</h1>' . wpautop(get_the_content($page));
-			}	
+			}
+			
+			// Remove excess white space from HTML
+			$html = preg_replace('/\s+/', '', $html);
+				
 			$mpdf->WriteHTML($html);
 			// Log page build complete
 			error_log('Page Complete: "' . get_the_title($page) . '"' );
+			
+			// Free memory
+			unset($html,$image);
 		}
 		
 		$count++;
