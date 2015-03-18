@@ -2,11 +2,37 @@
 	$total_pages = wp_count_posts('page')->publish;
 	$pages = get_pages('sort_column=menu_order&sort_order=asc');
 	$ids = array();
-	foreach($pages as $page) {
-		$ids[] .= $page->ID;
+	if($total_pages < 30)
+	{
+	    // Get progress based on word count
+	    $word_count_index =array();
+	    foreach($pages as $page) {
+	        $ids[] .= $page->ID;
+	        // Get word count
+	        $content = get_post_field( 'post_content', $page->ID );
+	        $word_count = str_word_count( strip_tags( $content ) );
+	        $word_count_index[] = $word_count;
+	    }
+	    $page_index = array_search(get_the_ID(),$ids) + 1;      
+	    $total_words = array_sum($word_count_index);
+	    $words_used_so_far = array_sum(array_slice($word_count_index,0,$page_index)); 
+	    $progress = round(($words_used_so_far / $total_words) * 100);
+	
+	    // stop reaching 100% before the last page - in case last page is less than 1% of total length. 
+	    if($progress == 100 && $page_index != $total_pages)
+	    {
+	        $progress = 99;
+	    }
 	}
-	$page_index = array_search(get_the_ID(),$ids) + 1;
-	$progress = round(($page_index / $total_pages) * 100);
+	else
+	{
+	    // Get progress based on page count
+	    foreach($pages as $page) {
+	        $ids[] .= $page->ID;
+	    }
+	    $page_index = array_search(get_the_ID(),$ids) + 1;
+	    $progress = round(($page_index / $total_pages) * 100);      
+	}
 	get_header();
 ?>
 
