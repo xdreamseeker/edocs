@@ -23,12 +23,6 @@
 	    {
 	        $progress = 99;
 	    }
-	    echo "<p>total_pages: $total_pages<br>
-	     page_index: $page_index <br>
-	     total_words: $total_words <br>
-	     words_used_so_far: $words_used_so_far<br>
-	     progress:$progress</p>";
-	     print_r($word_count_index);
 	}
 	else
 	{
