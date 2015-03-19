@@ -86,8 +86,9 @@
 					<ul class="dropdown-menu" role="menu">
 					<li><a class="email" href="mailto:?subject=<?php echo str_replace(' ','%20',get_bloginfo('name')); ?>&amp;body=<?php echo str_replace(' ','%20',get_bloginfo('url')); ?>">Email</a></li>
 					<li><a class="twitter" href="http://twitter.com/home?status=Reading:<?php echo get_bloginfo('url'); ?>" target="_blank">Twitter</a></li>
-					<li><a class="facebook" href="http://www.facebook.com/sharer.php?u=<?php echo get_bloginfo('url');?>&amp;t=<?php echo $_GET['title']; ?>" onclick="window.open(this.href); return false;">Facebook</a></li>
+					<li><a class="facebook" href="http://www.facebook.com/sharer.php?u=<?php echo get_bloginfo('url');?>&amp;t=<?php bloginfo('name'); ?>" onclick="window.open(this.href); return false;">Facebook</a></li>
 					<li><a class="google-plus" target="_blank" href="https://plus.google.com/share?url=<?php echo get_bloginfo('url'); ?>">Google+</a></li>
+					<li><a class="instapaper" target="_blank" href="http://www.instapaper.com/hello2?url=<?php echo get_bloginfo('url'); ?>&title=<?php bloginfo('name'); ?>&description=<?php bloginfo('description'); ?> ">Instapaper</a></li>
 					</ul></li>
 					<?php } ?>
 					<?php if( get_option('edocs_options')['help'] ) { ?>
