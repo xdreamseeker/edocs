@@ -109,7 +109,7 @@
 						echo '</div>';
 
 						echo '<div class="percentage col-md-2 hidden-xs text-center">';
-						echo '<span data-toggle="tooltip" data-placement="top" title="Page ' . $current .' of ' . count($pagelist) . '">' . (is_front_page() ? 0 : $progress ) . '%</span>';
+						echo '<span data-toggle="tooltip" data-placement="top" title="Page ' . $current .' of ' . count($pagelist) . '">' . $progress . '%</span>';
 						echo '</div>';
 
 						echo '<div class="visible-xs col-xs-4 text-right">';						
