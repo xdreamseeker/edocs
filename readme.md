@@ -1,7 +1,5 @@
 # eDocs
 
-http://tarpey.digital/edocs
-
 eDocs is a WordPress theme that helps create and publish documents to make them digital by default.
 
 ##How it works
